@@ -22,5 +22,13 @@ def NexusHeader(seq_dict):
     header += "MATRIX\n"
     return header
 
+def NexusMatrix(seq_dict):
+    matrix = ""
+    for seq_name, seq in seq_dict.items():
+        matrix += f"{seq_name[1::]} {seq}\n"
+    matrix += ";\n"
+    return matrix
+
 seq_dict = FastaToDict(file)
 print(NexusHeader(seq_dict))
+print(NexusMatrix(seq_dict))
