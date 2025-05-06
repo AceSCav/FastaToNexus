@@ -12,8 +12,8 @@
 # Run conversion
 python fasta2nexus.py input.fasta > output.nex
 
-# Run tests
-python -m unittest test_*.py
+# Run tests example
+python -m unittest test_fasta_to_dict.py
 ```
 
 ## Testing
